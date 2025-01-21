@@ -58,11 +58,11 @@ const Payment = () => {
                 currency_code: "INR",
                 payments_session_id: "2000000012001",
                 currency_symbol: "₹",
-                business: "Zylker",
-                description: "Purchase of Zylker electronics.",
+                business: "Webtrixz Technologies",
+                description: "School Management Software.",
                 address: {
                     name: "Canon",
-                    email: "canonbolt@zylker.com",
+                    email: "webtrixz@gmail.com",
                 },
             };
 

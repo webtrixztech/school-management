@@ -52,19 +52,18 @@ const Payment = () => {
         }
 
         setLoading(true);
-        try {
-            const options = {
-                amount: "1",
-                currency_code: "INR",
-                payments_session_id: "2000000012001",
-                currency_symbol: "₹",
-                business: "Zylker",
-                description: "Purchase of Zylker electronics.",
-                address: {
-                    name: "Canon",
-                    email: "canonbolt@zylker.com",
-                },
-            };
+        const options = {
+            amount: "1500",
+            currency_code: "INR",
+            payments_session_id: "2000000012001",
+            currency_symbol: "₹",
+            business: "Webtrixz Technologies",
+            description: "School Management Software.",
+            address: {
+                name: "Canon",
+                email: "webtrixz@gmail.com",
+            },
+        };
 
             const paymentData = await ZPaymentsInstance.requestPaymentMethod(options);
             console.log(options,'gsgffsgsgf');
