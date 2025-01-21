@@ -54,7 +54,7 @@ const Payment = () => {
         setLoading(true);
         try {
             const options = {
-                amount: "1500",
+                amount: "1",
                 currency_code: "INR",
                 payments_session_id: "2000000012001",
                 currency_symbol: "₹",

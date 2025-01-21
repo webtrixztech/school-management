@@ -112,7 +112,7 @@ const Payment = () => {
 
 
 
-      <div className="school-pay max-w-sm mx-auto bg-gradient-to-br from-green-600 to-blue-400 shadow-2xl rounded-2xl border border-gray-300 overflow-hidden transform transition duration-500 hover:scale-105">
+      <div className="school-pay max-w-sm mx-auto bg-gradient-to-br from-pink-600 to-green-400 shadow-2xl rounded-2xl border border-gray-300 overflow-hidden transform transition duration-500 hover:scale-105">
   <div className="p-6 text-center">
     <h2 className="text-3xl font-extrabold text-white mb-4">
       Pay for Premium Fees
