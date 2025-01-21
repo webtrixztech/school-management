@@ -61,7 +61,7 @@ const Payment = () => {
                 business: "Webtrixz Technologies",
                 description: "School Management Software.",
                 address: {
-                    name: "Canon",
+                    name: "mumbai andheri",
                     email: "webtrixz@gmail.com",
                 },
             };
