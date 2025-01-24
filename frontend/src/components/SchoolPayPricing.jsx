@@ -1,3 +1,4 @@
+import { postApiData } from '@/helper/common';
 import { useState, useEffect } from 'react';
 
 const Payment = () => {
@@ -50,13 +51,21 @@ const Payment = () => {
             console.error('ZPayments instance is not ready');
             return;
         }
+  
+        const apiData = { currency:"INR", amount:1 };
+        const data = await postApiData('payment/create-payment-session',apiData);
+        console.log(data,"hjhhh");
+        
+        const payments_session_id = data?.payments_session?.payments_session_id;
+        console.log(payments_session_id,"");
+        
 
         setLoading(true);
         try {
             const options = {
-                amount: "1500",
+                amount: "1",
                 currency_code: "INR",
-                payments_session_id: "2000000012001",
+                payments_session_id: payments_session_id,
                 currency_symbol: "₹",
                 business: "Webtrixz Technologies",
                 description: "School Management Software.",
