@@ -1,10 +1,10 @@
 const axios = require("axios");
 
 const ZOHO_ACCOUNT_ID = "60034516384";
-const ZOHO_REFRESH_TOKEN = "1000.746b762c7d8648118b1fd84cd1a38c4e.0128f16032f52e3e9f39db4700e1c2e8";
-const ZOHO_CLIENT_ID = "1000.SXS2T8YXTTBCKH1T0CBNFDDU10KH7V";
-const ZOHO_CLIENT_SECRET = "bb7bf100fe2a90123506b60cf77434d95b691592ec";
-const ZOHO_PAYMENT_API = `https://payments.zoho.in/api/v1/paymentsessions?account_id=60034516384`;
+const ZOHO_REFRESH_TOKEN =  process.env.ZOHO_REFRESH_TOKEN
+const ZOHO_CLIENT_ID = process.env.ZOHO_CLIENT_ID;
+const ZOHO_CLIENT_SECRET = process.env.ZOHO_CLIENT_SECRET;
+const ZOHO_PAYMENT_API = process.env.ZOHO_PAYMENT_API
 
 let ZOHO_ACCESS_TOKEN = null; // Ensure the global variable is initialized
 
