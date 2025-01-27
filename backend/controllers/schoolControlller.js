@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 const ZOHO_ACCOUNT_ID = process.env.ZOHO_ACCOUNT_ID;
-const ZOHO_REFRESH_TOKEN = "1000.bc5593493ee70949301a4e5c5ac1be44.12fe7afec6901be79cdf53c6aff0bc9b";
+const ZOHO_REFRESH_TOKEN = "1000.4582bfa32acd882da8a34daed081ad0f.81cfdbf5f149d50be44b70cdb16ca0f1";
 const ZOHO_CLIENT_ID = "1000.FTS6LQWHAI6VCHP67WSH71HZBW091I";
 const ZOHO_CLIENT_SECRET = "355528be04b59595a5f5c471f732212ee77d5b6e52";
 const ZOHO_PAYMENT_API = "https://payments.zoho.in/api/v1/paymentsessions?account_id=60034736461";
@@ -23,6 +23,7 @@ const getNewAccessToken = async () => {
         },
       }
     );
+console.log(response);
 
     ZOHO_ACCESS_TOKEN = response.data.access_token; // Update the global access token
     console.log("New access token generated:", ZOHO_ACCESS_TOKEN);
