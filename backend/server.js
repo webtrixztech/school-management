@@ -5,13 +5,15 @@ const cors = require("cors")
 const app = express();
 app.use(express.json());
 
-const PORT = 5000;
+const PORT = process.env.PORT;
 
 
 app.use(cors())
-const PaymentRoute = require('./routes/payment')
+const PaymentRoute = require('./routes/studentPayment')
+const SchoolRoute = require('./routes/schoolPayment')
 
-app.use('/payment', PaymentRoute)
+app.use('/student', PaymentRoute)
+app.use('/school', SchoolRoute)
 
 
 

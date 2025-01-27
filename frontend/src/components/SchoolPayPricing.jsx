@@ -18,10 +18,10 @@ const Payment = () => {
                 script.onload = () => {
                     if (window.ZPayments) {
                         const config = {
-                            account_id: "60034516384",
+                            account_id: "60034736461",
                             domain: "IN",
                             otherOptions: {
-                                api_key: "1003.fc0c27e5e5a242cec477dcd9b3f67079.2d0043c9b25dcf75880ff00e14a67566",
+                                api_key: "1003.4e0b9d9b51e21963448abaa1b635033f.f050f18337b0fedac083570ecb11778e",
                             },
                         };
                         try {
@@ -53,11 +53,11 @@ const Payment = () => {
         }
   
         const apiData = { currency:"INR", amount:1 };
-        const data = await postApiData('payment/create-payment-session',apiData);
-        console.log(data,"hjhhh");
+        const data = await postApiData('school/create-school-session',apiData);
+        console.log(data,"schol");
         
         const payments_session_id = data?.payments_session?.payments_session_id;
-        console.log(payments_session_id,"");
+        console.log(payments_session_id,"schoo sesccion key");
         
 
         setLoading(true);
@@ -68,7 +68,7 @@ const Payment = () => {
                 payments_session_id: payments_session_id,
                 currency_symbol: "₹",
                 business: "Webtrixz Technologies",
-                description: "School Management Software.",
+                description: "School Fees.",
                 address: {
                     name: "mumbai andheri",
                     email: "webtrixz@gmail.com",
@@ -121,23 +121,23 @@ const Payment = () => {
 
 
 
-      <div className="school-pay max-w-sm mx-auto bg-gradient-to-br from-pink-600 to-green-400 shadow-2xl rounded-2xl border border-gray-300 overflow-hidden transform transition duration-500 hover:scale-105">
+      <div className="school-pay max-w-sm mx-auto bg-gradient-to-br from-black to-red-400 shadow-2xl rounded-2xl border border-gray-300 overflow-hidden transform transition duration-500 hover:scale-105">
   <div className="p-6 text-center">
     <h2 className="text-3xl font-extrabold text-white mb-4">
-      Pay for Premium Fees
+      School Premium Fees <br />payement 2
     </h2>
     <p className="text-lg text-gray-100 mb-6">
       Select the most convenient payment option for your premium school fees and complete the process securely.
     </p>
     <div className="bg-white rounded-lg shadow-md py-2 px-2 mb-6">
-      <p className="text-2xl font-bold text-green-600"> Total Amount ₹1500</p>
+      <p className="text-2xl font-bold text-green-600"> Total Amount ₹1</p>
     </div>
     <button
       onClick={handlerSubmit}
       disabled={loading}
       className="w-full bg-white text-green-600 font-bold py-3 px-5 rounded-lg shadow-md hover:bg-gray-100 hover:text-green-700 transition duration-300"
     >
-      {loading ? "Processing..." : `Pay Now ₹ 1500`}
+      {loading ? "Processing..." : `Pay Now ₹ 1`}
     </button>
   </div>
   <div className="bg-white py-3 text-sm text-gray-600 text-center">

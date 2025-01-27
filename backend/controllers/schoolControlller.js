@@ -1,10 +1,10 @@
 const axios = require("axios");
 
-const ZOHO_ACCOUNT_ID = "60034516384";
-const ZOHO_REFRESH_TOKEN =  process.env.ZOHO_REFRESH_TOKEN
-const ZOHO_CLIENT_ID = process.env.ZOHO_CLIENT_ID;
-const ZOHO_CLIENT_SECRET = process.env.ZOHO_CLIENT_SECRET;
-const ZOHO_PAYMENT_API = process.env.ZOHO_PAYMENT_API
+const ZOHO_ACCOUNT_ID = process.env.ZOHO_ACCOUNT_ID;
+const ZOHO_REFRESH_TOKEN = "1000.bc5593493ee70949301a4e5c5ac1be44.12fe7afec6901be79cdf53c6aff0bc9b";
+const ZOHO_CLIENT_ID = "1000.FTS6LQWHAI6VCHP67WSH71HZBW091I";
+const ZOHO_CLIENT_SECRET = "355528be04b59595a5f5c471f732212ee77d5b6e52";
+const ZOHO_PAYMENT_API = "https://payments.zoho.in/api/v1/paymentsessions?account_id=60034736461";
 
 let ZOHO_ACCESS_TOKEN = null; // Ensure the global variable is initialized
 
@@ -34,7 +34,7 @@ const getNewAccessToken = async () => {
 };
 
 // Function to create a payment session
-exports.createPaymentSession = async (req, res) => {
+exports.createSchoolSession = async (req, res) => {
   try {
     const { currency, amount } = req.body;
 
