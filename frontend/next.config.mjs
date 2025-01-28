@@ -1,8 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    env: {
+    // env: {
+    //     HOSTNAME: 'localhost',
+    //     APIBASEURL: 'http://localhost:5000',
+    //   },
+
+
+      env: {
         HOSTNAME: 'localhost',
-        APIBASEURL: 'http://localhost:5000',
+        APIBASEURL: 'https://school-management-hp72.onrender.com/',
       },
 };
 
