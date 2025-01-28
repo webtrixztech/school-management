@@ -8,7 +8,7 @@ const nextConfig = {
 
       env: {
         HOSTNAME: 'localhost',
-        APIBASEURL: 'https://school-management-hp72.onrender.com/',
+        APIBASEURL: 'https://school-management-hp72.onrender.com',
       },
 };
 
