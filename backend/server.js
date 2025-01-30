@@ -106,7 +106,7 @@ app.get("/", (req, res) => {
 </head>
 <body>
     <div class="container">
-        <h1>School2 Managemenent System API Routes</h1>
+        <h1>sssfgs Managemenent System API Routes</h1>
         <p>The following are the available API routes for the School Managemenent system:</p>
 
      
