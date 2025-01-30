@@ -16,10 +16,10 @@ const getNewAccessToken = async () => {
       null,
       {
         params: {
-          code: ZOHO_REFRESH_TOKEN,
+          refresh_token: ZOHO_REFRESH_TOKEN,
           client_id: ZOHO_CLIENT_ID,
           client_secret: ZOHO_CLIENT_SECRET,
-          grant_type: "authorization_code", // Correct grant type for using refresh token
+          grant_type: "refresh_token", // Correct grant type for using refresh token
         },
       }
     );
