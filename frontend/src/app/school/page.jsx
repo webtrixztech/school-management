@@ -96,7 +96,14 @@ const Payment = () => {
       }
     }
   };
-
+  const handleClick = (e) => {
+    if (loading) {
+      e.preventDefault();
+    } else {
+      e.preventDefault(); // Prevent default navigation
+      window.open("/school", "_blank", "noopener,noreferrer,width=800,height=600");
+    }
+  };
   return (
     <>
    <div className="school-pay max-w-sm mx-auto my-10 bg-gradient-to-br from-black to-red-500 shadow-lg rounded-2xl border border-gray-300 overflow-hidden transform transition-transform duration-500 hover:scale-105">
@@ -126,9 +133,9 @@ const Payment = () => {
       </p>
     </div>
     {/* Pay Button */}
-    <Link target="_blank"
-  href={loading ? "#" : "/school"}
-  onClick={(e) => loading && e.preventDefault()}
+    <Link
+  href="#"
+  onClick={handleClick}
   className={`w-full py-3 px-6 rounded-lg shadow-md font-bold text-lg transition-colors duration-300 flex justify-center items-center ${
     loading
       ? "bg-gray-300 text-gray-500 cursor-not-allowed pointer-events-none"
