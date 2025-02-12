@@ -1,5 +1,6 @@
 "use client";
 import { postApiData } from "@/helper/common";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 const Payment = () => {
@@ -125,17 +126,17 @@ const Payment = () => {
       </p>
     </div>
     {/* Pay Button */}
-    <button
-      onClick={handlerSubmit}
-      disabled={loading}
-      className={`w-full py-3 px-6 rounded-lg shadow-md font-bold text-lg transition-colors duration-300 ${
-        loading
-          ? "bg-gray-300 text-gray-500 cursor-not-allowed"
-          : "bg-white text-green-600 hover:bg-gray-100 hover:text-green-700"
-      }`}
-    >
-      {loading ? "Processing..." : `Pay Now ₹ 1`}
-    </button>
+    <Link target="_blank"
+  href={loading ? "#" : "/school"}
+  onClick={(e) => loading && e.preventDefault()}
+  className={`w-full py-3 px-6 rounded-lg shadow-md font-bold text-lg transition-colors duration-300 flex justify-center items-center ${
+    loading
+      ? "bg-gray-300 text-gray-500 cursor-not-allowed pointer-events-none"
+      : "bg-white text-green-600 hover:bg-gray-100 hover:text-green-700"
+  }`}
+>
+  {loading ? "Processing..." : `Pay Now ₹ 10`}
+</Link>
   </div>
 
   {/* Footer */}
