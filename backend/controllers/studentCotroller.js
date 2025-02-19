@@ -9,7 +9,7 @@ let ZOHO_ACCESS_TOKEN = null; // Ensure the global variable is initialized
 
 // Function to generate a new acces
 const getNewAccessToken = async () => {
-  try {
+  try { 
     const response = await axios.post(
       "https://accounts.zoho.in/oauth/v2/token",
       null,
@@ -47,7 +47,6 @@ exports.createStudentSession = async (req, res) => {
       await getNewAccessToken();
     }
 
-    console.log(ZOHO_ACCESS_TOKEN,"julolii");
     
 
     const config = {
@@ -65,14 +64,14 @@ exports.createStudentSession = async (req, res) => {
     // Attempt to create a payment session
     let response;
     try {
-      response = await axios.post("https://payments.zoho.in/api/v1/paymentsessions?account_id=60034516384", payload, config);
+      response = await axios.post(ZOHO_PAYMENT_API, payload, config);
     } catch (error) {
       // Handle token expiry and retry the request
       if (error.response?.status === 401) {
         console.log("Access token expired. Generating a new one...");
         await getNewAccessToken(); // Generate a new access token
         config.headers.Authorization = `Zoho-oauthtoken ${ZOHO_ACCESS_TOKEN}`;
-        response = await axios.post("https://payments.zoho.in/api/v1/paymentsessions?account_id=60034516384", payload, config); // Retry the request
+        response = await axios.post(ZOHO_PAYMENT_API, payload, config); // Retry the request
       } else {
         throw error; // Re-throw if it's not a token expiry issue
       }
